@@ -20,6 +20,9 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: '3.9'
+    #pop what you need to pip install after you set up python, but before you run your scraper
+      - name: install necessary puthon packages
+        run: pip install pandas beautifulsoup4 requests
     #MAKE SURE YOU SCRAPER FILE NAME MATCHES THE FILENAME HERE
       - name: Run the scraping script
         run: python scraper.py
